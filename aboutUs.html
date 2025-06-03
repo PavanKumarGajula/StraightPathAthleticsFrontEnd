@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Straight Path Athletics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hero-enhanced.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({ once: true, duration: 1000 });
+  });
+</script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
+</head>
+<body class="bg-black text-white font-sans">
+
+<div class="absolute top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] sm:w-[90%] lg:w-[95%]">
+  <nav class="h-16 sm:h-20 flex items-center justify-between px-4 bg-yellow-400 rounded-3xl shadow border border-yellow-300">
+  
+    <!-- Left Logo -->
+    <div class="h-full flex items-center">
+      <img src="assets/logo.png" alt="SPA Logo" class="h-full max-h-full object-contain" />
+    </div>
+
+
+    <!-- Center Logo (Bismillah) -->
+    <div class="absolute left-1/2 transform -translate-x-1/2">
+      <img src="assets/arabiclogo.png" alt="Bismillah" class="h-8 sm:h-9 object-contain" />
+    </div>
+
+    <!-- Right Hamburger (visible on <lg) -->
+    <div class="flex-shrink-0 lg:hidden">
+      <button id="mobile-toggle" class="text-black focus:outline-none">
+        <svg id="hamburger-icon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop Nav (only on lg and up) -->
+<div class="hidden lg:flex items-center space-x-2 text-sm font-bold uppercase ml-auto text-black">
+  <a href="index.html" class="px-5 py-2 rounded-full transition hover:bg-black hover:text-yellow-300">
+    Home
+  </a>
+  <a href="programs.html" class="px-5 py-2 rounded-full transition hover:bg-black hover:text-yellow-300">
+    Programs
+  </a>
+  <a href="../StraightPathAthletics_Frontend/aboutUs.html" class="px-5 py-2 rounded-full transition hover:bg-black hover:text-yellow-300">
+    About Us
+  </a>
+  <a href="donate.html" class="bg-black text-yellow-400 px-5 py-2 rounded-full shadow hover:bg-yellow-300 hover:text-black transition">
+    Donate
+  </a>
+</div>
+
+  </nav>
+
+  <!-- Mobile Menu (shown on <lg) -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-yellow-400 rounded-b-3xl px-4 pt-4 pb-6 mt-1 text-black font-bold text-sm uppercase">
+    <a href="index.html" class="block py-2 hover:text-white">Home</a>
+    <a href="programs.html" class="block py-2 hover:text-white">Programs</a>
+    <a href="about.html" class="block py-2 hover:text-white">About Us</a>
+    <a href="donate.html" class="block text-center mt-3 bg-black text-yellow-400 py-2 rounded-full shadow hover:bg-yellow-300 hover:text-black transition">
+      Donate
+    </a>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<section class="relative bg-black text-white overflow-hidden pt-44 sm:pt-52 lg:pt-60 pb-20 px-4 sm:px-8 md:px-16">
+  
+  <!-- Abstract Yellow Shape -->
+  <div class="absolute top-0 right-0 w-[120%] h-[120%] bg-yellow-400 transform rotate-6 scale-150 z-0 opacity-[0.04] -translate-y-20"></div>
+  
+  <!-- Optional Texture Overlay -->
+  <!-- Uncomment if pattern available -->
+  <div class="absolute inset-0 bg-[url('/assets/pattern.svg')] bg-cover opacity-5 z-0"></div>
+
+  <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+    <!-- Left Content -->
+    <div class="space-y-6 text-center md:text-left">
+      <h1 class="text-yellow-300 md:text-6xl font-extrabold leading-tight animate__animated animate__fadeInLeft">
+        WE ARE SHAPING TOMORROW'S LEADERS THROUGH SPORTS.
+
+
+      </h1>
+      <p class="text-lg text-gray-300 max-w-md animate__animated animate__fadeInLeft animate__delay-1s">
+       Our programs at Straight Path Athletics are tailored to raise a generation of strong, confident, and compassionate young leaders, ready to make a difference far beyond the game.
+      </p>
+      <div class="flex justify-center md:justify-start gap-4 animate__animated animate__fadeInLeft animate__delay-2s">
+        <a href="#join" class="bg-yellow-400 text-black font-bold py-3 px-6 rounded-full hover:bg-yellow-500 transition">
+          Join Now
+        </a>
+        <a href="#video" class="border border-yellow-400 text-yellow-400 py-3 px-6 rounded-full hover:bg-yellow-400 hover:text-black transition">
+          Watch Video
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Feature Card -->
+    <div class="relative animate__animated animate__zoomIn">
+      <div class="bg-gray-900 border-2 border-yellow-500 p-6 rounded-3xl shadow-lg max-w-md mx-auto text-center">
+        <div class="text-yellow-400 text-5xl mb-4">
+          <i class="fas fa-futbol"></i>
+        </div>
+        <h2 class="text-2xl font-bold mb-2">Summer Camps 2025</h2>
+        <p class="text-gray-300 mb-4 text-sm">Limited spots available for our flag football, soccer, and basketball camps.</p>
+        <a href="#register" class="inline-block bg-yellow-400 text-black font-semibold py-2 px-4 rounded-full hover:bg-yellow-500 transition">
+          Register Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-black text-white py-24 px-6 sm:px-10 md:px-20">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Left Content -->
+    <div class="space-y-6">
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight">
+        We are shaping tomorrow’s leaders through sports.
+      </h2>
+      <p class="text-gray-300 text-md sm:text-lg leading-relaxed">
+        Straight Path Athletics is a nonprofit organization (501(c)(3) designation pending) empowering youth through structured athletic training, positive mentorship, and faith-based values.
+      </p>
+      <p class="text-gray-300 text-md sm:text-lg leading-relaxed">
+        Our coaches lead with heart—instilling discipline, teamwork, and courage—to develop confident, resilient athletes who excel on the field, in the classroom, and in life.
+      </p>
+
+      <!-- Custom Progress Bars / Value Indicators -->
+      <div class="space-y-4">
+        <div>
+          <div class="flex justify-between text-sm font-bold uppercase text-yellow-400 mb-1">
+            <span>Discipline</span><span>90%</span>
+          </div>
+          <div class="w-full bg-gray-800 h-2 rounded">
+            <div class="bg-yellow-400 h-2 rounded" style="width: 90%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm font-bold uppercase text-yellow-400 mb-1">
+            <span>Teamwork</span><span>95%</span>
+          </div>
+          <div class="w-full bg-gray-800 h-2 rounded">
+            <div class="bg-yellow-400 h-2 rounded" style="width: 95%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm font-bold uppercase text-yellow-400 mb-1">
+            <span>Resilience</span><span>85%</span>
+          </div>
+          <div class="w-full bg-gray-800 h-2 rounded">
+            <div class="bg-yellow-400 h-2 rounded" style="width: 85%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Image + Stat Badge -->
+    <div class="relative">
+      <img src="assets/aboutUs.png" alt="Coach talking" class="rounded-2xl shadow-lg w-full object-cover" />
+
+      <!-- Stat Badge -->
+      <div class="absolute bottom-4 right-4 bg-yellow-400 text-black px-6 py-4 rounded-xl shadow-lg text-center">
+        <div class="text-3xl font-extrabold">500+</div>
+        <div class="text-sm font-semibold">Athletes Impacted</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="relative overflow-hidden py-28 px-6 sm:px-10 md:px-20 bg-black text-white">
+  <!-- Diagonal Yellow Background -->
+  <div class="absolute inset-0 bg-yellow-400 skew-y-3 origin-bottom-left opacity-[0.07] z-0"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- Mission -->
+    <div 
+      class="backdrop-blur-lg bg-white/5 border border-yellow-500/20 rounded-3xl p-8 shadow-xl transition-all duration-700"
+      data-aos="fade-up-right"
+    >
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-12 flex items-center justify-center bg-yellow-400 text-black rounded-full shadow-lg text-xl">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-yellow-400">Our Mission</h3>
+      </div>
+      <p class="text-gray-300 leading-relaxed text-lg">
+        To inspire and mentor youth through competitive sports, leadership programs, and faith-based guidance — creating a safe and supportive space for personal and athletic development.
+      </p>
+    </div>
+
+    <!-- Vision -->
+    <div 
+      class="backdrop-blur-lg bg-white/5 border border-yellow-500/20 rounded-3xl p-8 shadow-xl transition-all duration-700"
+      data-aos="fade-up-left"
+    >
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-12 flex items-center justify-center bg-yellow-400 text-black rounded-full shadow-lg text-xl">
+          <i class="fas fa-eye"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-yellow-400">Our Vision</h3>
+      </div>
+      <p class="text-gray-300 leading-relaxed text-lg">
+        To build a generation of confident, disciplined, and spiritually rooted athletes who carry strength and integrity both on and off the field and court.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-black text-white py-28 px-6" id="core-values">
+  <!-- Section Heading -->
+  <div class="max-w-7xl mx-auto text-center mb-16">
+    <h2 class="text-5xl font-extrabold text-yellow-400 animate__animated animate__fadeInDown relative inline-block">
+      Our Core Values
+      <span class="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-yellow-300 opacity-60 rounded-full animate-pulse"></span>
+    </h2>
+    <p class="text-lg text-gray-400 mt-4 max-w-3xl mx-auto">
+      Rooted in Islamic principles, these values guide our athletes toward excellence, character, and faith.
+    </p>
+  </div>
+
+  <!-- Core Value Cards -->
+  <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+    
+    <!-- Faith -->
+    <div class="card-hover-effect bg-gray-900 border border-yellow-500 rounded-2xl p-8 shadow-xl" data-aos="fade-up">
+      <div class="arabic-calligraphy mb-4 text-right text-yellow-700 text-5xl font-bold leading-none">إِيمَان</div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Faith</h3>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        We don’t leave our faith on the sidelines. Athletes are taught to carry their Islamic identity on and off the court—competing with sincerity, discipline, and remembrance of Allah.
+      </p>
+    </div>
+
+    <!-- Excellence -->
+    <div class="card-hover-effect bg-gray-900 border border-yellow-500 rounded-2xl p-8 shadow-xl" data-aos="fade-up" data-aos-delay="100">
+      <div class="arabic-calligraphy mb-4 text-right text-yellow-700 text-5xl font-bold leading-none">إِحْسَان</div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Excellence</h3>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        We strive for excellence in both athletic performance and character. Athletes are encouraged to give their best effort and pursue personal growth on and off the field.
+      </p>
+    </div>
+
+    <!-- Integrity -->
+    <div class="card-hover-effect bg-gray-900 border border-yellow-500 rounded-2xl p-8 shadow-xl" data-aos="fade-up" data-aos-delay="200">
+      <div class="arabic-calligraphy mb-4 text-right text-yellow-700 text-5xl font-bold leading-none">صِدْق</div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Integrity</h3>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        Guided by Islamic values, we promote honesty, fairness, and respect. Athletes lead by example with humility and ethical conduct.
+      </p>
+    </div>
+
+    <!-- Perseverance -->
+    <div class="card-hover-effect bg-gray-900 border border-yellow-500 rounded-2xl p-8 shadow-xl" data-aos="fade-up" data-aos-delay="300">
+      <div class="arabic-calligraphy mb-4 text-right text-yellow-700 text-5xl font-bold leading-none">إِسْتِقامَة</div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Perseverance</h3>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        Success requires patience and resilience. We help young athletes develop mental toughness to overcome challenges with a strong mindset.
+      </p>
+    </div>
+
+    <!-- Brotherhood & Sisterhood -->
+    <div class="card-hover-effect bg-gray-900 border border-yellow-500 rounded-2xl p-8 shadow-xl" data-aos="fade-up" data-aos-delay="400">
+      <div class="arabic-calligraphy mb-4 text-right text-yellow-700 text-5xl font-bold leading-none">أُخُوَّة</div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Brotherhood & Sisterhood</h3>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        We build a strong sense of community and teamwork. Athletes are taught the value of supporting each other and prioritizing the team over individual success.
+      </p>
+    </div>
+
+    <!-- Character -->
+    <div class="card-hover-effect bg-gray-900 border border-yellow-500 rounded-2xl p-8 shadow-xl" data-aos="fade-up" data-aos-delay="500">
+      <div class="arabic-calligraphy mb-4 text-right text-yellow-700 text-5xl font-bold leading-none">أَخْلَاق</div>
+      <h3 class="text-xl font-bold text-yellow-300 mb-2">Character</h3>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        We use sports as a tool to reinforce humility, gratitude, and responsibility—nurturing both spiritual and personal development through intentional mentorship.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-black text-white py-24 px-6" id="our-team">
+  <div class="max-w-7xl mx-auto mb-16 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-yellow-400 animate__animated animate__fadeInDown">
+      Our Team
+    </h2>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto items-start">
+    
+    <!-- Coach Card -->
+    <div class="bg-zinc-900 border border-yellow-500 rounded-2xl overflow-hidden shadow-xl flex flex-col h-full" data-aos="fade-right">
+      <img src="assets/coach.png" alt="Coach Samir" class="w-full h-auto object-cover" />
+      <div class="p-6 flex-1 flex flex-col justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-yellow-400 mb-1">Coach Samir</h3>
+          <p class="text-sm font-semibold text-white mb-3">Volunteer Coach & Trainer</p>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Samir has played competitive basketball for 25 years and has long been committed to coaching and training youth in the community. A regular in local leagues, he brings both experience and passion to the court. Samir is dedicated to helping young players grow through rigorous, faith-based training that builds both skill and character.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Group Photo -->
+    <div class="border border-yellow-500 rounded-2xl overflow-hidden shadow-xl h-full flex items-center justify-center" data-aos="fade-left">
+      <img src="assets/team.jpg" alt="Team Group" class="w-full h-auto object-cover" />
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-zinc-900 text-white py-24 px-6" id="our-partner">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-yellow-400 animate__animated animate__fadeInDown mb-8">
+      Our Partner
+    </h2>
+
+    <p class="text-lg text-gray-300 leading-relaxed mb-10" data-aos="fade-up">
+      As part of this mission, we’re proud to partner with the <span class="text-yellow-400 font-semibold">Muslim Athletic Program (MAP)</span> at the <span class="text-yellow-400 font-semibold">Islamic Society of Baltimore (ISB)</span> — a community initiative focused on promoting healthy, active lifestyles and strong relationships through sport. Together, we’re creating inclusive, high-energy environments where youth from all backgrounds can grow, compete, and thrive.
+    </p>
+
+    <!-- Optional Partner Logo -->
+    <div class="flex items-center justify-center grayscale hover:grayscale-0 transition" data-aos="zoom-in">
+      <img src="assets/partner.png" alt="Muslim Athletic Program Logo" class="h-20 md:h-24 object-contain" />
+    </div>
+  </div>
+</section>
+
+
+</body>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    offset: 120,
+  });
+</script>
+
+</html>

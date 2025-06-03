@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en"><!-- Hero Section with Unified Background -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Straight Path Athletics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/counter.js" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/hero-enhanced.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body class="bg-black text-white font-sans">
+
+<!-- Hanging Navbar -->
+<div class="absolute top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] sm:w-[90%] lg:w-[95%]">
+  <nav class="h-12 sm:h-14 flex items-center justify-between px-4 bg-yellow-400 rounded-xl shadow border border-yellow-300">
+  
+    <!-- Left Logo -->
+    <div class="h-full flex items-center">
+      <img src="assets/logo.png" alt="SPA Logo" class="h-full max-h-full object-contain" />
+    </div>
+
+
+    <!-- Center Logo (Bismillah) -->
+    <div class="absolute left-1/2 transform -translate-x-1/2">
+      <img src="assets/arabiclogo.png" alt="Bismillah" class="h-8 sm:h-9 object-contain" />
+    </div>
+
+    <!-- Right Hamburger (visible on <lg) -->
+    <div class="flex-shrink-0 lg:hidden">
+      <button id="mobile-toggle" class="text-black focus:outline-none">
+        <svg id="hamburger-icon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop Nav (only on lg and up) -->
+<div class="hidden lg:flex items-center space-x-2 text-xs font-bold uppercase ml-auto text-black">
+  <a href="index.html" class="px-5 py-2 rounded-full transition hover:bg-black hover:text-yellow-300">
+    Home
+  </a>
+  <a href="programs.html" class="px-5 py-2 rounded-full transition hover:bg-black hover:text-yellow-300">
+    Programs
+  </a>
+  <a href="../StraightPathAthletics_Frontend/aboutUs.html" class="px-5 py-2 rounded-full transition hover:bg-black hover:text-yellow-300">
+    About Us
+  </a>
+  <a href="donate.html" class="bg-black text-yellow-400 px-5 py-2 rounded-full shadow hover:bg-yellow-300 hover:text-black transition">
+    Donate
+  </a>
+</div>
+
+  </nav>
+
+  <!-- Mobile Menu (shown on <lg) -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-yellow-400 rounded-b-3xl px-4 pt-4 pb-6 mt-1 text-black font-bold text-sm uppercase">
+    <a href="index.html" class="block py-2 hover:text-white">Home</a>
+    <a href="programs.html" class="block py-2 hover:text-white">Programs</a>
+    <a href="about.html" class="block py-2 hover:text-white">About Us</a>
+    <a href="donate.html" class="block text-center mt-3 bg-black text-yellow-400 py-2 rounded-full shadow hover:bg-yellow-300 hover:text-black transition">
+      Donate
+    </a>
+  </div>
+</div>
+
+<section class="relative bg-black text-white min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Background Image -->
+  <img src="assets/hero.png" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover brightness-200 z-0" />
+  <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black/90 z-10"></div>
+
+  <!-- Hero Content -->
+  <div class="relative z-20 px-4 sm:px-6 lg:px-8 text-center max-w-screen-lg mx-auto">
+
+    <!-- Icon -->
+    <div class="mb-6">
+      <svg class="w-16 sm:w-20 h-16 sm:h-20 text-yellow-400 animate-bounce mx-auto"
+           xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 17.93V13h4.93A8.015 8.015 0 0 1 13 19.93zM11 19.93A8.015 8.015 0 0 1 6.07 13H11zm-6.93-7A8.015 8.015 0 0 1 11 6.07V11zm6.93-5.93A8.015 8.015 0 0 1 17.93 11H13z"/>
+      </svg>
+    </div>
+
+    <!-- Headline -->
+     <h1 id="hero-typing" class="text-center font-extrabold text-yellow-400 text-xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight max-w-4xl mx-auto mb-6">
+     </h1>
+
+
+    <!-- Description -->
+    <p class="text-sm sm:text-base md:text-lg text-white mb-8 max-w-2xl mx-auto px-2 sm:px-0">
+      Straight Path Athletics is a nonprofit organization (501(c)(3) designation pending) committed to structured training, positive mentorship, and faith-based values to develop confident, disciplined athletes on and off the field or court.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center px-2">
+      <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-lg transition hover:scale-105 text-sm sm:text-base">
+        Register Now
+      </a>
+      <a href="#" class="border border-yellow-300 hover:bg-yellow-400 text-yellow-300 hover:text-black font-semibold px-6 py-3 rounded-lg transition hover:scale-105 text-sm sm:text-base">
+        Donate Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-30 animate-bounce">
+    <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+</section>
+
+  
+<!-- Our Impact Section -->
+<section class="bg-gradient-to-b from-black to-neutral-900 text-white py-24 px-4">
+  <div class="max-w-6xl mx-auto border-4 border-yellow-400 rounded-3xl p-6 md:p-1 shadow-2xl" data-aos="fade" data-aos-duration="1000">
+    <div class="bg-[#0f0f0f] rounded-2xl p-6 md:p-10">
+
+      <!-- Header -->
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16 text-left">
+        <div data-aos="fade-up">
+          <h2 class="text-3xl md:text-5xl font-bold leading-tight text-white">
+            More than a game:<br class="hidden sm:block" />
+            Building character through every play
+          </h2>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <p class="text-base md:text-lg text-gray-300">
+            With every program, we've been able to reach farther and do more. Over the past year, we’ve built structure, supported 100+ young athletes, and delivered values-based sports mentorship that truly transforms.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1 -->
+        <div class="rounded-2xl p-6 shadow-lg bg-cover bg-center flex flex-col justify-between min-h-[420px]"
+             style="background-image: url('./assets/bg1.png');"
+             data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-yellow-400 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m-5-6a4 4 0 108 0 4 4 0 00-8 0zM5 13l1.5 2 2-2" />
+            </svg>
+            <h3 class="text-lg md:text-xl font-semibold text-white">Athletes Trained</h3>
+          </div>
+          <div class="mt-auto text-right">
+            <p class="text-5xl md:text-6xl font-extrabold text-white counter" data-count="256">0</p>
+            <hr class="my-2 border-white/30" />
+            <p class="text-xs md:text-sm text-white/90">
+              Over 25,000 youth supported through structured training, mentorship, and values-driven coaching.
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="flex flex-col gap-6">
+          <!-- Image -->
+          <div class="rounded-2xl overflow-hidden shadow-lg h-[200px]" data-aos="zoom-in" data-aos-delay="300">
+            <img src="assets/overview2.jpg" alt="Mentorship" class="object-cover w-full h-full" />
+          </div>
+
+          <!-- Card -->
+          <div class="rounded-2xl p-6 shadow-lg bg-cover bg-center flex flex-col justify-between min-h-[200px]"
+               style="background-image: url('./assets/bg2.png');" data-aos="fade-up" data-aos-delay="400">
+            <div class="flex items-center gap-2">
+              <svg class="w-6 h-6 text-yellow-400 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3 class="text-lg md:text-xl font-semibold text-white">Volunteer Support</h3>
+            </div>
+            <div class="mt-auto text-right">
+              <p class="text-4xl md:text-5xl font-extrabold text-white counter" data-count="120">0</p>
+              <hr class="my-2 border-white/30" />
+              <p class="text-xs md:text-sm text-white/90">Local volunteers involved across training, games, and logistics.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="flex flex-col gap-6">
+          <!-- Card -->
+          <div class="rounded-2xl p-6 shadow-lg bg-cover bg-center flex flex-col justify-between min-h-[200px]"
+               style="background-image: url('./assets/bg3.png');" data-aos="fade-up" data-aos-delay="500">
+            <div class="flex items-center gap-2">
+              <svg class="w-6 h-6 text-yellow-400 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h3 class="text-lg md:text-xl font-semibold text-white">Parent Satisfaction</h3>
+            </div>
+            <div class="mt-auto text-right">
+              <p class="text-4xl md:text-5xl font-extrabold text-white counter" data-count="99">0</p>
+              <hr class="my-2 border-white/30" />
+              <p class="text-xs md:text-sm text-white/90">Parents report improved behavior, faith focus, and discipline in kids.</p>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="rounded-2xl overflow-hidden shadow-lg h-[200px]" data-aos="zoom-in" data-aos-delay="600">
+            <img src="assets/overview2.jpg" alt="Youth Speaker" class="object-cover w-full h-full" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who We Are Section -->
+<section class="relative bg-black text-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+
+  <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-16 relative z-10">
+
+    <!-- Text Block -->
+    <div class="w-full lg:w-1/2 text-center lg:text-left space-y-8" data-aos="fade-right" data-aos-duration="1000">
+
+      <!-- Glowing Football + Headings -->
+<div class="flex items-center justify-center lg:justify-start gap-4 mb-4">
+  <!-- Glowing Bouncing Ball -->
+  <div class="relative w-14 h-14 sm:w-16 sm:h-16">
+    <!-- Glow Layers -->
+    <div class="absolute inset-0 rounded-full bg-yellow-400 opacity-40 blur-xl animate-ping"></div>
+    <div class="absolute inset-2 rounded-full bg-yellow-300 opacity-30 blur-md"></div>
+    <!-- Ball -->
+    <div class="relative z-10 text-3xl sm:text-4xl animate-bounce drop-shadow-[0_0_8px_rgba(255,255,0,0.6)]">
+      🏈
+    </div>
+  </div>
+
+  <!-- Split Glow Heading -->
+  <div class="relative text-left">
+    <h2 class="relative text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-400 leading-tight">
+      <span class="relative z-10">Who We Are</span>
+      <span class="absolute top-0 left-0 text-white/10 z-0 select-none">Who We Are</span>
+    </h2>
+  </div>
+</div>
+
+
+      <!-- Subheading -->
+      <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-white/80 italic tracking-wide animate__animated animate__fadeInUp animate__delay-1s">
+        Where character, faith, and sport come together.
+      </h3>
+
+      <!-- Description -->
+      <p class="text-sm sm:text-base md:text-lg text-gray-300 animate__animated animate__fadeInUp animate__delay-1s">
+        Straight Path Athletics is a mission-driven nonprofit shaping the next generation of Muslim athletes — with structure, mentorship, and core Islamic values guiding every step of their journey.
+      </p>
+
+      <!-- CTA -->
+      <a href="#about" class="inline-block bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition-all hover:scale-105 animate__animated animate__fadeInUp animate__delay-2s">
+        Learn More →
+      </a>
+    </div>
+
+    <!-- Image Block -->
+    <div class="w-full lg:w-1/2" data-aos="zoom-in" data-aos-delay="200">
+      <div class="relative w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-yellow-400 hover:scale-105 transition-transform duration-700">
+        <img src="assets/aboutUs.png" alt="Straight Path Athletics" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/20 backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <span class="text-yellow-300 text-sm font-semibold">Building Muslim Leaders</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Our Programs Section -->
+<section class="bg-black text-white py-16 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+    <h2 class="text-3xl md:text-5xl font-bold text-yellow-400 mb-6 animate-fadeInUp">
+      Our Programs
+    </h2>
+    <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-16 animate-fadeInUp delay-200">
+      Discover our dynamic youth development programs that combine sports, mentorship, and faith-driven values.
+    </p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
+      <!-- Card 1: Basketball -->
+      <div class="bg-gray-900 border border-yellow-500 rounded-2xl p-6 shadow-lg group hover:shadow-yellow-400/40 transition animate-fadeInUp delay-300">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xl font-bold animate-spin">
+            🏀
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold text-yellow-400">Basketball</h3>
+        </div>
+        <p class="text-sm md:text-base text-gray-300">
+          Structured basketball training designed to boost skills, leadership, and character on and off the court.
+        </p>
+      </div>
+
+      <!-- Card 2: Flag Football -->
+      <div class="bg-gray-900 border border-yellow-500 rounded-2xl p-6 shadow-lg group hover:shadow-yellow-400/40 transition animate-fadeInUp delay-500">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xl font-bold animate-bounce delay-150">
+            🏈
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold text-yellow-400">Flag Football</h3>
+        </div>
+        <p class="text-sm md:text-base text-gray-300">
+          Foster speed, strategy, and Islamic sportsmanship in our faith-based flag football sessions.
+        </p>
+      </div>
+
+      <!-- Card 3: Mentorship -->
+      <div class="bg-gray-900 border border-yellow-500 rounded-2xl p-6 shadow-lg group hover:shadow-yellow-400/40 transition animate-fadeInUp delay-700">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xl font-bold animate-bounce delay-300">
+            👨‍🏫
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold text-yellow-400">Mentorship</h3>
+        </div>
+        <p class="text-sm md:text-base text-gray-300">
+          Personal mentorship and Islamic leadership coaching that helps youth grow with confidence and purpose.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image Collage Section -->
+<section class="bg-black py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-5xl font-bold text-yellow-400 text-center mb-10">Gallery Highlights</h2>
+
+    <div class="-m-1 flex flex-wrap md:-m-2">
+      <!-- Left Column -->
+      <div class="flex w-1/2 flex-wrap">
+        <div class="w-1/2 p-1 md:p-2">
+          <img src="assets/hero.png" alt="Gallery 1" class="block w-full h-full rounded-xl object-cover object-center hover:scale-105 transition duration-300" />
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          <img src="assets/flagfootball.png" alt="Gallery 2" class="block w-full h-full rounded-xl object-cover object-center hover:scale-105 transition duration-300" />
+        </div>
+        <div class="w-full p-1 md:p-2">
+          <img src="assets/overview1.png" alt="Gallery 3" class="block w-full h-full rounded-xl object-cover object-center hover:scale-105 transition duration-300" />
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="flex w-1/2 flex-wrap">
+        <div class="w-full p-1 md:p-2">
+          <img src="assets/overview2.jpg" alt="Gallery 4" class="block w-full h-full rounded-xl object-cover object-center hover:scale-105 transition duration-300" />
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          <img src="assets/overview3.png" alt="Gallery 5" class="block w-full h-full rounded-xl object-cover object-center hover:scale-105 transition duration-300" />
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          <img src="assets/basketball.png" alt="Gallery 6" class="block w-full h-full rounded-xl object-cover object-center hover:scale-105 transition duration-300" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- How We Shape Champions Section -->
+<section class="relative bg-black text-white py-20 overflow-hidden">
+  <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-yellow-400 opacity-10 blur-[180px] animate-ping-slow z-0"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-5xl font-bold text-yellow-400 mb-6 animate__animated animate__fadeInDown">How We Shape Champions</h2>
+    <p class="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-16 animate__animated animate__fadeInUp animate__delay-1s">
+      Our programs go beyond the game — instilling discipline, faith, leadership, and purpose in every young athlete.
+    </p>  
+
+        <!-- Grid -->
+    <div class="grid md:grid-cols-2 gap-8 text-left">
+      <!-- Flag Football Card -->
+      <div data-aos="fade-right" class="bg-gray-900 border border-yellow-500 rounded-2xl shadow-xl p-6 flex flex-col items-start hover:shadow-yellow-400/40 transition group">
+        <img src="assets/flagfootball.png" alt="Flag Football" class="rounded-xl w-full aspect-[4/3] object-cover mb-4">
+        <div class="flex items-center gap-2 text-yellow-400 text-xl font-bold mb-2 animate__animated animate__tada">🏈 Flag Football</div>
+        <p class="text-sm text-gray-300 mb-4">
+          Build speed, strategy, and teamwork in a values-centered football program designed for Muslim youth.
+        </p>
+        <a href="#" class="mt-auto text-yellow-300 hover:text-yellow-400 font-semibold group-hover:underline">
+          Learn More →
+        </a>
+      </div>
+
+      <!-- Basketball Card -->
+      <div data-aos="fade-left" class="bg-gray-900 border border-yellow-500 rounded-2xl shadow-xl p-6 flex flex-col items-start hover:shadow-yellow-400/40 transition group">
+        <img src="assets/basketball.png" alt="Basketball" class="rounded-xl w-full aspect-[4/3] object-cover mb-4">
+        <div class="flex items-center gap-2 text-yellow-400 text-xl font-bold mb-2 animate__animated animate__bounceIn">🏀 Basketball</div>
+        <p class="text-sm text-gray-300 mb-4">
+          Develop discipline, agility, and sportsmanship with structured training rooted in Islamic values.
+        </p>
+        <a href="#" class="mt-auto text-yellow-300 hover:text-yellow-400 font-semibold group-hover:underline">
+          Learn More →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How We Shape Champions Section -->
+<section class="relative bg-black text-white py-20 overflow-hidden">
+  <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-yellow-400 opacity-10 blur-[180px] animate-ping-slow z-0"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-5xl font-bold text-yellow-400 mb-6 animate__animated animate__fadeInDown">How We Shape Champions</h2>
+    <p class="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-16 animate__animated animate__fadeInUp animate__delay-1s">
+      Our programs go beyond the game — instilling discipline, faith, leadership, and purpose in every young athlete.
+    </p>  
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-left z-10 relative">
+      <!-- CARD 1: Discipline -->
+      <div data-aos="zoom-in" data-aos-delay="100" class="bg-gray-900 border border-yellow-500 rounded-2xl shadow-xl group transition transform hover:scale-105 hover:shadow-yellow-400/40 p-6 flex flex-col items-start overflow-hidden relative">
+        <div class="absolute -top-6 -left-6 bg-yellow-400 w-20 h-20 rounded-full blur-2xl opacity-20 animate-ping-slow"></div>
+        <div class="text-4xl mb-4 animate__animated animate__slideInDown">⏱️</div>
+        <h3 class="text-xl md:text-2xl font-bold text-yellow-400 mb-2">Discipline & Routine</h3>
+        <p class="text-sm md:text-base text-gray-300">
+          Our sessions emphasize punctuality, structured drills, and repetition — building mental and physical discipline through consistency.
+        </p>
+      </div>
+
+      <!-- CARD 2: Leadership -->
+      <div data-aos="zoom-in" data-aos-delay="200" class="bg-gray-900 border border-yellow-500 rounded-2xl shadow-xl group transition transform hover:scale-105 hover:shadow-yellow-400/40 p-6 flex flex-col items-start overflow-hidden relative">
+        <div class="absolute -top-6 -right-6 bg-yellow-400 w-20 h-20 rounded-full blur-2xl opacity-20 animate-ping-slow"></div>
+        <div class="text-4xl mb-4 animate__animated animate__headShake animate__delay-1s">🧠</div>
+        <h3 class="text-xl md:text-2xl font-bold text-yellow-400 mb-2">Leadership & Teamwork</h3>
+        <p class="text-sm md:text-base text-gray-300">
+          Through team roles and peer mentorship, athletes develop responsibility, communication, and collaborative skills.
+        </p>
+      </div>
+
+      <!-- CARD 3: Faith Integration -->
+      <div data-aos="zoom-in" data-aos-delay="300" class="bg-gray-900 border border-yellow-500 rounded-2xl shadow-xl group transition transform hover:scale-105 hover:shadow-yellow-400/40 p-6 flex flex-col items-start overflow-hidden relative">
+        <div class="absolute bottom-0 right-0 bg-yellow-400 w-16 h-16 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+        <div class="text-4xl mb-4 animate__animated animate__pulse animate__infinite">🕌</div>
+        <h3 class="text-xl md:text-2xl font-bold text-yellow-400 mb-2">Faith-Driven Values</h3>
+        <p class="text-sm md:text-base text-gray-300">
+          We embed Islamic principles in every practice — reinforcing adab, prayer reminders, and spiritual confidence.
+        </p>
+      </div>
+
+      <!-- CARD 4: Confidence -->
+      <div data-aos="zoom-in" data-aos-delay="400" class="bg-gray-900 border border-yellow-500 rounded-2xl shadow-xl group transition transform hover:scale-105 hover:shadow-yellow-400/40 p-6 flex flex-col items-start overflow-hidden relative">
+        <div class="text-4xl mb-4 animate__animated animate__zoomIn">💪</div>
+        <h3 class="text-xl md:text-2xl font-bold text-yellow-400 mb-2">Confidence & Grit</h3>
+        <p class="text-sm md:text-base text-gray-300">
+          Training environments encourage bold decision-making and resilience — preparing athletes to rise under pressure.
+        </p>
+      </div>
+
+      <!-- CARD 5: Community -->
+      <div data-aos="zoom-in" data-aos-delay="500" class="bg-gray-900 border border-yellow-500 rounded-2xl shadow-xl group transition transform hover:scale-105 hover:shadow-yellow-400/40 p-6 flex flex-col items-start overflow-hidden relative">
+        <div class="text-4xl mb-4 animate__animated animate__rubberBand animate__delay-1s">🤝</div>
+        <h3 class="text-xl md:text-2xl font-bold text-yellow-400 mb-2">Community & Brotherhood</h3>
+        <p class="text-sm md:text-base text-gray-300">
+          We build bonds that extend off the court — cultivating friendships and unity rooted in shared values and respect.
+        </p>
+      </div>
+
+      <!-- CARD 6: Goal-Setting -->
+      <div data-aos="zoom-in" data-aos-delay="600" class="bg-gray-900 border border-yellow-500 rounded-2xl shadow-xl group transition transform hover:scale-105 hover:shadow-yellow-400/40 p-6 flex flex-col items-start overflow-hidden relative">
+        <div class="text-4xl mb-4 animate__animated animate__tada animate__delay-2s">🎯</div>
+        <h3 class="text-xl md:text-2xl font-bold text-yellow-400 mb-2">Focus & Goal-Setting</h3>
+        <p class="text-sm md:text-base text-gray-300">
+          Every practice includes reflection and journaling — helping kids internalize personal goals and growth mindset.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Watch Our Programs in Action Section -->
+<section class="bg-black text-white relative overflow-hidden min-h-screen flex flex-col">
+  <!-- Glow Background -->
+  <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] bg-yellow-400 opacity-10 blur-[180px] animate-ping-slow z-0"></div>
+
+  <!-- Headings -->
+  <div class="text-center px-4 pt-12 z-10">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-yellow-400 mb-4 animate__animated animate__fadeInDown">
+      Watch Our Programs in Action
+    </h2>
+    <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8 animate__animated animate__fadeInUp">
+      Take a look at our youth in action and get a feel for what our programs are all about.
+    </p>
+  </div>
+
+  <!-- Video Area -->
+  <div class="w-2/3 max-w-6xl aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-yellow-500 mx-auto">
+    <iframe
+      id="mainVideo"
+      class="w-full h-full"
+      src="https://www.youtube.com/embed/a4JW8WGwzKw"
+      title="SPA Highlight"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <br>
+
+  <!-- Control Buttons -->
+  <div class="flex justify-center gap-6 pb-12 z-10">
+    <button onclick="switchVideo(-1)" class="bg-yellow-400 hover:bg-yellow-300 text-black px-5 py-2 rounded-full shadow-md">
+      &#8592; Prev
+    </button>
+    <button onclick="switchVideo(1)" class="bg-yellow-400 hover:bg-yellow-300 text-black px-5 py-2 rounded-full shadow-md">
+      Next &#8594;
+    </button>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const videos = [
+      "https://www.youtube.com/embed/a4JW8WGwzKw",
+      "https://www.youtube.com/embed/zWJJ2Y7CBLU",
+      "https://www.youtube.com/embed/_REu5aZLZ6U"
+    ];
+    let currentVideo = 0;
+
+    function switchVideo(direction) {
+      currentVideo += direction;
+      if (currentVideo < 0) currentVideo = videos.length - 1;
+      if (currentVideo >= videos.length) currentVideo = 0;
+      document.getElementById('mainVideo').src = videos[currentVideo];
+    }
+  </script>
+</section>
+<!-- Testimonials Section -->
+<section class="bg-black text-white py-24 relative overflow-hidden">
+  <!-- Background Icons -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="absolute top-10 left-5 text-[100px] opacity-5 blur-sm">🏀</div>
+    <div class="absolute top-1/3 left-1/2 text-[90px] opacity-5 blur-sm -translate-x-1/2">🕌</div>
+    <div class="absolute bottom-10 left-10 text-[80px] opacity-5 blur-sm">🎯</div>
+    <div class="absolute bottom-14 right-16 text-[100px] opacity-5 blur-sm">🤝</div>
+    <div class="absolute top-16 right-10 text-[90px] opacity-5 blur-sm">🏈</div>
+    <div class="absolute top-2/3 right-1/3 text-[70px] opacity-5 blur-sm">🧠</div>
+  </div>
+
+  <!-- Testimonials Content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-5xl font-bold text-yellow-400 mb-4">Success Stories</h2>
+    <p class="text-base md:text-lg text-gray-300 mb-12">What our athletes and families are saying</p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Testimonial 1 -->
+      <div class="relative bg-yellow-300 text-black p-6 pt-10 rounded-lg shadow-xl transform -rotate-3 hover:rotate-0 transition duration-300">
+        <div class="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-l-[40px] border-t-black/20 border-l-transparent rounded-tr-md"></div>
+        <div class="text-5xl mb-3">👩‍🦰</div>
+        <p class="mb-4 italic">"I love the structure and values SPA teaches. My son comes home motivated and grounded."</p>
+        <div class="text-yellow-600 text-lg mb-1">⭐⭐⭐⭐⭐</div>
+        <div class="font-bold">Zainab A.</div>
+        <p class="text-sm text-black/70">Parent of Flag Football Player</p>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="relative bg-yellow-400 text-black p-6 pt-10 rounded-lg shadow-xl transform rotate-2 hover:rotate-0 transition duration-300">
+        <div class="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-l-[40px] border-t-black/20 border-l-transparent rounded-tr-md"></div>
+        <div class="text-5xl mb-3">👨‍🦱</div>
+        <p class="mb-4 italic">"These coaches are mentors. My child not only improved in basketball but also in character."</p>
+        <div class="text-yellow-700 text-lg mb-1">⭐⭐⭐⭐⭐</div>
+        <div class="font-bold">Haroon M.</div>
+        <p class="text-sm text-black/70">Basketball Camp Parent</p>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="relative bg-yellow-200 text-black p-6 pt-10 rounded-lg shadow-xl transform -rotate-6 hover:rotate-0 transition duration-300">
+        <div class="absolute top-0 right-0 w-0 h-0 border-t-[40px] border-l-[40px] border-t-black/20 border-l-transparent rounded-tr-md"></div>
+        <div class="text-5xl mb-3">👦</div>
+        <p class="mb-4 italic">"SPA helped me become more confident. I learned teamwork, leadership, and brotherhood."</p>
+        <div class="text-yellow-600 text-lg mb-1">⭐⭐⭐⭐⭐</div>
+        <div class="font-bold">Amin R.</div>
+        <p class="text-sm text-black/70">Youth Athlete</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Programs Section -->
+<section class="bg-black text-white py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-5xl font-bold text-yellow-400 mb-4 animate__animated animate__fadeInDown">
+      Upcoming Programs
+    </h2>
+    <p class="text-base md:text-lg text-gray-300 mb-12 max-w-2xl animate__animated animate__fadeInUp">
+      Reserve your spot in our latest training sessions and seasonal camps.
+    </p>
+
+    <!-- Programs Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Program Cards -->
+      <!-- Each card structure will remain same as described -->
+      <!-- Only the styling and spacing are ensured to be consistent and responsive -->
+
+      <!-- Program 1 -->
+      <div class="bg-gray-900 border border-yellow-500 rounded-2xl shadow-lg overflow-hidden transition hover:scale-105 hover:shadow-yellow-400/30 relative flex flex-col h-full">
+        <div class="aspect-[4/5] w-full overflow-hidden">
+          <img src="assets/banner.jpg" alt="..." class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">Session Full</span>
+        </div>
+        <div class="p-5 space-y-2 text-left flex-grow">
+          <h3 class="text-lg font-bold text-yellow-400">SPA X ISB Boys SPRING Basketball Camp</h3>
+          <p class="text-sm text-gray-300 flex items-center gap-1">📍 Islamic Society of Baltimore Gymnasium</p>
+          <p class="text-sm text-gray-300 flex items-center gap-1">🧒 Boys Ages 7–12</p>
+          <p class="text-sm text-gray-300 flex items-center gap-1">📅 Apr 13 – Jun 8 · 3:00–4:30 PM</p>
+        </div>
+      </div>
+
+      <!-- Program 2 -->
+      <div class="bg-gray-900 border border-yellow-500 rounded-2xl shadow-lg overflow-hidden transition hover:scale-105 hover:shadow-yellow-400/30 relative flex flex-col h-full">
+        <div class="aspect-[4/5] w-full overflow-hidden">
+          <img src="assets/banner.jpg" alt="..." class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-green-500 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md">Enroll Now</span>
+        </div>
+        <div class="p-5 space-y-2 text-left flex-grow">
+          <h3 class="text-lg font-bold text-yellow-400">SPA Boys SUMMER Basketball Scrimmage Camp</h3>
+          <p class="text-sm text-gray-300 flex items-center gap-1">📍 Benjamin Banneker Middle School</p>
+          <p class="text-sm text-gray-300 flex items-center gap-1">🧒 Boys Ages 8–14</p>
+          <p class="text-sm text-gray-300 flex items-center gap-1">📅 Jun 16 – Jul 30 · Mon/Wed · 6:00–7:30 PM</p>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="#" class="inline-block bg-yellow-400 text-black text-sm font-semibold px-4 py-2 rounded-full hover:bg-yellow-300 transition">
+            Register →
+          </a>
+        </div>
+      </div>
+
+     <!-- Program 3 -->
+      <div class="bg-gray-900 border border-yellow-500 rounded-xl shadow-lg overflow-hidden transition hover:scale-105 hover:shadow-yellow-400/30 relative flex flex-col h-full">
+<div class="aspect-[4/5] w-full overflow-hidden">
+  <img src="assets/banner.jpg" alt="..." class="w-full h-full object-cover" />
+</div>
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-yellow-400 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md">Pre-Register</span>
+        </div>
+        <div class="p-5 space-y-2 text-left flex-grow">
+          <h3 class="text-lg font-bold text-yellow-400">SPA Boys Team – AAU Basketball</h3>
+          <p class="text-sm text-gray-300 flex items-center gap-1">📍 Howard County, MD</p>
+          <p class="text-sm text-gray-300 flex items-center gap-1">🧒 Boys Ages 9–11</p>
+          <p class="text-sm text-gray-300 flex items-center gap-1">📅 Fall 2025 · TBD</p>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="#" class="inline-block bg-yellow-400 text-black text-sm font-semibold px-4 py-2 rounded-full hover:bg-yellow-300 transition">
+            Pre-Register →
+          </a>
+        </div>
+      </div>
+
+      <!-- Program 4 -->
+      <div class="bg-gray-900 border border-yellow-500 rounded-xl shadow-lg overflow-hidden transition hover:scale-105 hover:shadow-yellow-400/30 relative flex flex-col h-full">
+<div class="aspect-[4/5] w-full overflow-hidden">
+  <img src="assets/banner.jpg" alt="..." class="w-full h-full object-cover" />
+</div>
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-yellow-400 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md">Pre-Register</span>
+        </div>
+        <div class="p-5 space-y-2 text-left flex-grow">
+          <h3 class="text-lg font-bold text-yellow-400">SPA Boys Summer Flag Football Camp</h3>
+          <p class="text-sm text-gray-300 flex items-center gap-1">📍 Howard County, MD</p>
+          <p class="text-sm text-gray-300 flex items-center gap-1">🧒 Boys Ages 5–12</p>
+          <p class="text-sm text-gray-300 flex items-center gap-1">📅 Summer 2025 · TBD</p>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="#" class="inline-block bg-yellow-400 text-black text-sm font-semibold px-4 py-2 rounded-full hover:bg-yellow-300 transition">
+            Pre-Register →
+          </a>
+        </div>
+      </div>
+
+      <!-- Program 5 -->
+      <div class="bg-gray-900 border border-yellow-500 rounded-xl shadow-lg overflow-hidden transition hover:scale-105 hover:shadow-yellow-400/30 relative flex flex-col h-full">
+<div class="aspect-[4/5] w-full overflow-hidden">
+  <img src="assets/banner.jpg" alt="..." class="w-full h-full object-cover" />
+</div>
+        <div class="absolute top-3 right-3 z-10">
+          <span class="bg-yellow-400 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md">Pre-Register</span>
+        </div>
+        <div class="p-5 space-y-2 text-left flex-grow">
+          <h3 class="text-lg font-bold text-yellow-400">SPA Boys Team – Flag Football</h3>
+          <p class="text-sm text-gray-300 flex items-center gap-1">📍 Howard County, MD</p>
+          <p class="text-sm text-gray-300 flex items-center gap-1">🧒 Boys Ages 7–12</p>
+          <p class="text-sm text-gray-300 flex items-center gap-1">📅 Fall 2025 · TBD</p>
+        </div>
+        <div class="p-5 pt-0">
+          <a href="#" class="inline-block bg-yellow-400 text-black text-sm font-semibold px-4 py-2 rounded-full hover:bg-yellow-300 transition">
+            Pre-Register →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-[#0a0a0a] text-white border-t border-gray-800 px-6 md:px-12 py-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+    <!-- Logo + CTA -->
+    <div class="space-y-2">
+<img src="assets/footerlogo.svg" alt="Straight Path Logo" class="h-24 w-auto max-h-none object-contain" />
+
+      <div>
+        <h3 class="text-xl font-semibold text-yellow-400">Become a Pathfinder</h3>
+        <p class="text-sm text-gray-300 mt-2">
+          Get first access to programs, events, and exclusive updates.
+        </p>
+      </div>
+      <a href="#" class="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-semibold text-sm px-6 py-3 rounded-md transition">
+        Join Our Email List!
+      </a>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h4 class="font-semibold text-white uppercase mb-4">Contact Us</h4>
+      <ul class="text-sm text-gray-300 space-y-2">
+        <li><a href="mailto:info@straightpathathletics.com" class="hover:text-yellow-400 transition">info@straightpathathletics.com</a></li>
+        <li>Howard County, MD</li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="font-semibold text-white uppercase mb-4">Quick Links</h4>
+      <ul class="text-sm text-gray-300 space-y-2">
+        <li><a href="#" class="hover:text-yellow-400 transition">FAQ</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-yellow-400 transition">Liability Waiver</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+  <h4 class="font-semibold text-white uppercase mb-4">Connect with Us</h4>
+  <div class="flex space-x-4 text-white text-3xl md:text-4xl">
+    <a href="#" class="hover:text-yellow-400 transition" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" class="hover:text-yellow-400 transition" aria-label="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="#" class="hover:text-yellow-400 transition" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="mt-2 pt-2 text-center text-sm text-white">
+    © 2025 Straight Path Athletics. All Rights Reserved.
+  </div>
+</footer>
+
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const openIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    openIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+</script>
+<script>
+  const text = "Empowering Young Muslim Athletes, Building Stronger Character";
+  const target = document.getElementById("hero-typing");
+  let index = 0;
+
+  function typeNextChar() {
+    if (index < text.length) {
+      target.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeNextChar, 40); // adjust typing speed here
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", typeNextChar);
+</script>
+
+
+ <script>
+  const counters = document.querySelectorAll('.counter');
+  let hasAnimated = false;
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const update = () => {
+        const target = +counter.getAttribute('data-count');
+        const count = +counter.innerText;
+        const inc = Math.ceil(target / 40);
+
+        if (count < target) {
+          counter.innerText = count + inc;
+          setTimeout(update, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      update();
+    });
+  };
+
+  // Animate once when section is in view
+  window.addEventListener('scroll', () => {
+    const section = document.querySelector('.counter')?.closest('section');
+    if (section && !hasAnimated && section.getBoundingClientRect().top < window.innerHeight - 100) {
+      animateCounters();
+      hasAnimated = true;
+    }
+  });
+</script>

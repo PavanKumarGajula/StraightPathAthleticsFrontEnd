@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPA | Programs</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({ once: true, duration: 1000 });
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+<div class="absolute top-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] sm:w-[90%] lg:w-[95%]">
+  <nav class="h-16 sm:h-20 flex items-center justify-between px-4 bg-yellow-400 rounded-3xl shadow border border-yellow-300">
+  
+    <!-- Left Logo -->
+    <div class="h-full flex items-center">
+      <img src="assets/logo.png" alt="SPA Logo" class="h-full max-h-full object-contain" />
+    </div>
+
+
+    <!-- Center Logo (Bismillah) -->
+    <div class="absolute left-1/2 transform -translate-x-1/2">
+      <img src="assets/arabiclogo.png" alt="Bismillah" class="h-8 sm:h-9 object-contain" />
+    </div>
+
+    <!-- Right Hamburger (visible on <lg) -->
+    <div class="flex-shrink-0 lg:hidden">
+      <button id="mobile-toggle" class="text-black focus:outline-none">
+        <svg id="hamburger-icon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Desktop Nav (only on lg and up) -->
+<div class="hidden lg:flex items-center space-x-2 text-sm font-bold uppercase ml-auto text-black">
+  <a href="index.html" class="px-5 py-2 rounded-full transition hover:bg-black hover:text-yellow-300">
+    Home
+  </a>
+  <a href="programs.html" class="px-5 py-2 rounded-full transition hover:bg-black hover:text-yellow-300">
+    Programs
+  </a>
+  <a href="../StraightPathAthletics_Frontend/aboutUs.html" class="px-5 py-2 rounded-full transition hover:bg-black hover:text-yellow-300">
+    About Us
+  </a>
+  <a href="donate.html" class="bg-black text-yellow-400 px-5 py-2 rounded-full shadow hover:bg-yellow-300 hover:text-black transition">
+    Donate
+  </a>
+</div>
+
+  </nav>
+
+  <!-- Mobile Menu (shown on <lg) -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-yellow-400 rounded-b-3xl px-4 pt-4 pb-6 mt-1 text-black font-bold text-sm uppercase">
+    <a href="index.html" class="block py-2 hover:text-white">Home</a>
+    <a href="programs.html" class="block py-2 hover:text-white">Programs</a>
+    <a href="about.html" class="block py-2 hover:text-white">About Us</a>
+    <a href="donate.html" class="block text-center mt-3 bg-black text-yellow-400 py-2 rounded-full shadow hover:bg-yellow-300 hover:text-black transition">
+      Donate
+    </a>
+  </div>
+</div>
+
+<section class="relative bg-black text-white py-32 px-6 overflow-hidden" id="programs-hero">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- Left: Text Content -->
+    <div class="z-10" data-aos="fade-right">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-400 leading-tight relative inline-block">
+        Programs Designed to Inspire, Train,<br class="hidden md:block" />
+        and Transform Young Minds
+        <span class="block w-20 h-1 bg-yellow-500 mt-3 rounded-full animate-pulse"></span>
+      </h1>
+
+      <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-xl leading-relaxed">
+        Straight Path Athletics offers a variety of structured sports and character development programs that build physical strength, leadership, and spiritual grounding. Each program is rooted in our mission to empower youth through faith, mentorship, and sportsmanship.
+      </p>
+
+      <a href="#programs" class="inline-block mt-8 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full transition">
+        Explore Programs
+      </a>
+    </div>
+
+    <!-- Right: Hero Image -->
+    <div class="relative h-full w-full flex items-center justify-center" data-aos="fade-left">
+      <img src="assets/hero-programs-3d.png" alt="SPA Programs Hero Illustration"
+           class="w-full max-w-lg md:max-w-xl rounded-3xl shadow-2xl border-2 border-yellow-500" />
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Timeline Programs -->
+  <section class="py-10 px-6">
+    <div class="relative border-l-4 border-yellow-500 pl-8 space-y-20 max-w-3xl mx-auto">
+
+      <!-- Fall -->
+      <div data-aos="fade-up">
+        <div class="absolute -left-6 top-1 w-5 h-5 bg-yellow-500 rounded-full border-4 border-black"></div>
+        <h3 class="text-2xl font-bold text-yellow-400 mb-1">Fall Camp 2025</h3>
+        <p class="text-sm text-gray-400 mb-2">September – November | Ages 8–14</p>
+        <p class="text-sm text-gray-300">
+          A foundational football & basketball program focused on conditioning, teamwork, and skill-building. Balanced with Islamic character lessons and mentorship.
+        </p>
+        <button class="mt-4 bg-yellow-500 text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition">Register Now</button>
+      </div>
+
+      <!-- Winter -->
+      <div data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute -left-6 top-1 w-5 h-5 bg-yellow-500 rounded-full border-4 border-black"></div>
+        <h3 class="text-2xl font-bold text-yellow-400 mb-1">Winter Indoor League</h3>
+        <p class="text-sm text-gray-400 mb-2">January – February | Ages 10–16</p>
+        <p class="text-sm text-gray-300">
+          Indoor 3v3 and 5v5 tournaments with weekly training. Focused on sharpening performance while reinforcing Islamic values and sportsmanship.
+        </p>
+        <button class="mt-4 bg-gray-700 text-gray-400 px-4 py-2 rounded-full font-semibold cursor-not-allowed">Registration Closed</button>
+      </div>
+
+      <!-- Spring -->
+      <div data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute -left-6 top-1 w-5 h-5 bg-yellow-500 rounded-full border-4 border-black"></div>
+        <h3 class="text-2xl font-bold text-yellow-400 mb-1">Spring Training Series</h3>
+        <p class="text-sm text-gray-400 mb-2">March – May | Ages 7–12</p>
+        <p class="text-sm text-gray-300">
+          Focused on agility, endurance, and teamwork through structured drills and faith-based leadership sessions. Great for new and returning athletes.
+        </p>
+        <button class="mt-4 bg-yellow-500 text-black px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition">Register Now</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer CTA (Optional) -->
+  <section class="py-16 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h3 class="text-3xl font-bold text-yellow-400 mb-4">Ready to Join?</h3>
+      <p class="text-gray-300 mb-6">Explore our seasonal programs or reach out to learn how you can be a part of Straight Path Athletics.</p>
+      <a href="contact.html" class="bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition">Contact Us</a>
+    </div>
+  </section>
+
+</body>
+</html>
